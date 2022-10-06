@@ -1,0 +1,35 @@
+﻿@page "/"
+
+<h3>Cálculo da Função Afim</h3>
+
+<label>Coeficiente Angular</label>
+<input @bind="cfa" class="form-control" />
+<br />
+
+<label>Coeficiente Linear</label>
+<input @bind="cfl" class="form-control"/>
+<br />
+
+
+<label>Valor de X</label>
+<input @bind="x" class="form-control"/>
+<br />
+
+<label>Resultado: @resultado</label>
+<br />
+<div class="text-center">
+<button class="btn btn-outline-primary" @onclick="CalcularAfim">Calcular</button>
+</div>
+
+
+@code{
+    int x;
+    int cfa;
+    int cfl;
+    int resultado;
+
+    void CalcularAfim()
+    {
+        resultado = (x) = (cfa * x) + cfl;
+    }
+}
